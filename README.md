@@ -28,7 +28,7 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 | Level | Challenge |
 | :---: | :---: |
 |Length|			2 hours|
-|Registration fee     	|	$88.50 ~ 7040 rupees|
+|Registration fee     	|	$88.50 ≈ ₹7000|
 |Exam Format		| 	Multiple choice and multiple select|
 |Mode			| 	Remote or Exam center|
 |Prerequisites		| 	None|
@@ -40,13 +40,34 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 
 **LEARNING PLAN:**
 
-- Coursera (2 courses)
-- Cloud Skill Boost (1 learning path + 3 quests)
-- Youtube (playlist)(30)
-- Articles/Links (13)
-- Sharepoints (7 ppts)
-- Book (1)
+- [Coursera (2 courses)](#Coursera)
+- [Cloud Skill Boost (1 learning path + 3 quests)](#CloudSkillBoost)
+- [Youtube (playlist)(30)](#Youtube)
+- [Articles/Links (13)](#Articles/Links)
+- [Sharepoints (7 ppts)](#Sharepoints)
+- [Book (1)](#Book)
 
+<a name="Coursera"></a>
+### **Coursera:**
 
+<a name="CloudSkillBoost"></a>
+### **Cloud Skill Boost:**
 
+<a name="Youtube"></a>
+### **Youtube:**
 
+<a name="Articles/Links"></a>
+### **Articles/Links:**
+
+<a name="Sharepoints"></a>
+### **Sharepoints:**
+
+<a name="Book"></a>
+### **Book:**
+* [ ] [Official Google Cloud Certified Associate Cloud Engineer Study Guide](https://www.amazon.in/Official-Google-Certified-Associate-Engineer/dp/1119564417) **- Book by Dan Sullivan**
+
+<div align="center">
+<a href="https://cloud.google.com/training/cloud-infrastructure/#cloud-engineer-learning-path">
+  <img src="https://user-images.githubusercontent.com/59575502/188867248-b4ebef03-049d-4e0e-8641-d389a1b7c479.png"  align="center">
+</a>
+</div>
