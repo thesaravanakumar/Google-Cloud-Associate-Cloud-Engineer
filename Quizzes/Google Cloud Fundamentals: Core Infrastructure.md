@@ -100,4 +100,53 @@
   * [x] APIs
   * [ ] The Cloud Console mobile app
 
-## 
+## Virtual Machines and Networks in the Cloud
+- Which term describes a secure, individual, private cloud-computing model hosted within a public cloud?
+
+  * [ ] Virtual private cloud (VPC)
+  * [ ] Virtual private network (VPN)
+  * [ ] Content delivery network (CDN)
+  * [ ] Domain name system (DNS)
+
+- Select the true statement about Google’s VPC networks and subnets.
+
+  * [ ] Networks are global, and subnets are regional.
+  * [ ] Both networks and subnets are global.
+  * [ ] Networks are regional, and subnets are zonal.
+  * [ ] Networks are global, and subnets are zonal.
+
+- An application running in a Compute Engine virtual machine needs high-performance scratch space. Which type of storage meets this need?
+
+  * [ ] Local SSD
+  * [ ] Zonal persistent disk
+  * [ ] Regional persistent disk
+  * [ ] Cloud Storage bucket
+
+- Preemptible VMs can offer advantages over a standard Compute Engine VM. What is a reason customers choose preemptible VMs?
+
+  * [ ] To improve performance
+  * [ ] To reduce cost
+  * [ ] To use custom machine types
+  * [ ] To reduce cost on premium operating systems
+
+- Which statement best describes how VPC routers and firewalls work?
+
+  * [ ] They are managed by Google as a built-in feature.
+  * [ ] Customers provision virtual machines and run their routers and firewalls in them.
+  * [ ] They are managed by Google in virtual machines and customers can tune or deactivate them.
+  * [ ] They are managed by Google in virtual machines and customers cannot modify them.
+
+- A Google Cloud customer wants to load-balance traffic among the backend VMs that form part of a multi-tier application. Which load-balancing option should this customer choose?
+
+  * [ ] The regional load balancer
+  * [ ] The regional internal load balancer
+  * [ ] The global HTTP(S) load balancer
+  * [ ] The global TCP proxy
+  * [ ] The global SSL proxy
+
+- Which interconnect option is a service level agreement (SLA) available for?
+
+  * [ ] Dedicated Interconnect
+  * [ ] VPNs with Cloud Router
+  * [ ] Direct Peering
+  * [ ] Carrier Peering
