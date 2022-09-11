@@ -101,4 +101,7 @@ What if you want to give permissions to a Compute Engine virtual machine, rather
 
 ---
 ### Virtual Private Cloud Networking
-
+#### Virtual Private Cloud:
+A Virtual Private Clouds or VPC is a secure individual private cloud computing model hosted within a public cloud, like Google Cloud. 
+- Customers can run code, store data, host websites and do anything else they could do in an ordinary private cloud.
+- This private cloud is hosted remotely by a public cloud provider.
