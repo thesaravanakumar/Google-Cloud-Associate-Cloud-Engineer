@@ -103,21 +103,21 @@
 ## Virtual Machines and Networks in the Cloud
 - Which term describes a secure, individual, private cloud-computing model hosted within a public cloud?
 
-  * [ ] Virtual private cloud (VPC)
+  * [x] Virtual private cloud (VPC)
   * [ ] Virtual private network (VPN)
   * [ ] Content delivery network (CDN)
   * [ ] Domain name system (DNS)
 
 - Select the true statement about Google’s VPC networks and subnets.
 
-  * [ ] Networks are global, and subnets are regional.
+  * [x] Networks are global, and subnets are regional.
   * [ ] Both networks and subnets are global.
   * [ ] Networks are regional, and subnets are zonal.
   * [ ] Networks are global, and subnets are zonal.
 
 - An application running in a Compute Engine virtual machine needs high-performance scratch space. Which type of storage meets this need?
 
-  * [ ] Local SSD
+  * [x] Local SSD
   * [ ] Zonal persistent disk
   * [ ] Regional persistent disk
   * [ ] Cloud Storage bucket
@@ -125,13 +125,13 @@
 - Preemptible VMs can offer advantages over a standard Compute Engine VM. What is a reason customers choose preemptible VMs?
 
   * [ ] To improve performance
-  * [ ] To reduce cost
+  * [x] To reduce cost
   * [ ] To use custom machine types
   * [ ] To reduce cost on premium operating systems
 
 - Which statement best describes how VPC routers and firewalls work?
 
-  * [ ] They are managed by Google as a built-in feature.
+  * [x] They are managed by Google as a built-in feature.
   * [ ] Customers provision virtual machines and run their routers and firewalls in them.
   * [ ] They are managed by Google in virtual machines and customers can tune or deactivate them.
   * [ ] They are managed by Google in virtual machines and customers cannot modify them.
@@ -139,14 +139,57 @@
 - A Google Cloud customer wants to load-balance traffic among the backend VMs that form part of a multi-tier application. Which load-balancing option should this customer choose?
 
   * [ ] The regional load balancer
-  * [ ] The regional internal load balancer
+  * [x] The regional internal load balancer
   * [ ] The global HTTP(S) load balancer
   * [ ] The global TCP proxy
   * [ ] The global SSL proxy
 
 - Which interconnect option is a service level agreement (SLA) available for?
 
-  * [ ] Dedicated Interconnect
+  * [x] Dedicated Interconnect
   * [ ] VPNs with Cloud Router
   * [ ] Direct Peering
   * [ ] Carrier Peering
+
+## Storage in the Cloud
+- Which statement describes the correct Cloud Storage use case?
+
+  * [ ] Cloud Storage provides the root file system of a Linux virtual machine. 
+  * [x] Cloud Storage provides durable and highly available object storage.
+  * [ ] Cloud Storage provides data warehousing services.
+  * [ ] Cloud Storage provides RDBMS (Relational Database Management System) services.
+
+- Why would a customer consider the Coldline Storage class?
+
+  * [x] To save money on storing infrequently accessed data
+  * [ ] To use the Coldline Storage API
+  * [ ] To save money on storing frequently accessed data
+  * [ ] To improve security
+
+- Which database service can scale to higher database sizes?
+
+  * [ ] Cloud SQL
+  * [x] Cloud Spanner
+  * [ ] Bigtable
+  * [ ] Firestore
+
+- How are Firestore and Bigtable alike? (Select two answers.)
+
+  * [x] They are both highly scalable.
+  * [ ] They both offer SQL-like queries.
+  * [x] They are both NoSQL databases.
+  * [ ] They both have a free daily quota.
+
+- You manufacture devices with sensors and need to stream huge amounts of data from these devices to a storage option in the cloud. Which storage option is the best choice for your application?
+
+  * [ ] Firestore
+  * [x] Bigtable
+  * [ ] Cloud Spanner
+  * [ ] BigQuery
+
+- Your application needs to store data with strong transactional consistency, and you want seamless scaling up. Which storage option is the best choice for your application?
+
+  * [ ] Firestore
+  * [ ] Cloud SQL
+  * [x] Cloud Spanner
+  * [ ] Cloud Storage
