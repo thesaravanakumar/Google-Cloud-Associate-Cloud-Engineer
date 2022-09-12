@@ -101,7 +101,122 @@ What if you want to give permissions to a Compute Engine virtual machine, rather
 
 ---
 ### Virtual Private Cloud Networking
-#### Virtual Private Cloud:
-A Virtual Private Clouds or VPC is a secure individual private cloud computing model hosted within a public cloud, like Google Cloud. 
+#### Virtual Private Cloud ( virtual version of a physical network ):
+A VPC ( a foundation for your network in the cloud ) is a secure individual private cloud computing model hosted within a public cloud that provides **managed network functionality**.
+It has a ```global-scope``` so it can reach anywhere ( spans evey regions without accessing public internet ) securely.
+
+<img align = "left" width="600" src="https://user-images.githubusercontent.com/59575502/189604433-09b39179-ae3b-4958-9753-f1a746bf49a4.png">
+
 - Customers can run code, store data, host websites and do anything else they could do in an ordinary private cloud.
 - This private cloud is hosted remotely by a public cloud provider.
+- VPC's combine the scalability and convenience of public cloud computing with the data isolation of private cloud computing.
+- Networks are **global**, and subnets are **regional**.
+
+</br>
+
+```subnet``` is a fancy way of saying an IP segment in a VPC, In VPC ```routing tables``` are built-in so you don’t have to provision or manage a router. 
+### VPC Peering
+With VPC Peering, a relationship between two VPCs can be established to exchange traffic. Alternatively, to use the full power of **Identity Access Management (IAM)** to control who and what in one project can interact with a VPC in another, you can configure a ```Shared VPC```.
+**The resources that can be using a VPC network are the following:**
+- Shared VPC
+- Interconnect
+- NAT
+- Firewall Rules
+- Cloud Router
+- VPC Peering
+- VPN
+- Subnets, Instances and IP ranges
+
+
+### Compute Engine
+Compute Engine provides machine type recommendations to help you optimize the resource utilization of your virtual machine (VM) instances.
+- create and run ```VM``` on Google infrastructure and has ```Auto-scaling```.
+- There are no upfront investments.
+- VM contains the power and functionality of a full-fledged **operating system**.
+- Compute Engine has permission to ```terminate a job``` if its resources are needed elsewhere.
+
+### Cloud Load Balancing
+
+<p align="center">
+<img width="600" align = "center" src="https://user-images.githubusercontent.com/59575502/189662628-2f54b6e8-b77f-416e-9821-29ba138cfae8.png">
+</p>
+
+The job of a load balancer is to distribute user traffic across multiple instances of an application. Cloud Load Balancing is a fully distributed, software-defined, managed service for all your traffic. The load balancers ```don’t run in VMs``` that you have to manage, you don’t have to worry about scaling or managing them. You can put Cloud Load Balancing in front of all of your traffic.
+Types of LB's
+- ```Global HTTP(S)``` -> For cross-regional load balancing for a web application
+- ```Global SSL Proxy``` -> For Secure Sockets Layer traffic that is not HTTP, use the Global SSL Proxy load balancer
+- ```Global TCP Proxy``` -> If it’s other TCP traffic that doesn’t use SSL
+- ```Regional``` -> You can still load balance across a Google Cloud region with the Regional load balancer
+- ```Regional Internal``` -> If you want to load balance traffic inside your project
+> Those last two proxy services only work for specific port numbers, and they only work for TCP
+
+### Cloud DNS and Cloud CDN
+DNS [(8.8.8.8)](https://dns.google/) is what translates Internet host names to addresses.
+**Cloud DNS** lets you publish your zones and records in DNS without the burden of managing your own DNS servers and software. It offers both ```public zones``` and ```private``` managed DNS zones.
+
+```Edge caching``` refers to the use of caching servers to store content closer to end users. 
+Cloud **C**ontent **D**elivery **N**etwork ( To accelerate content delivery in your application ) 
+
+### Connecting networks to Google VPC
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/59575502/189668789-a260eda3-3d46-49d1-882e-8c474c419846.png">
+</p>
+
+- ```IPsec VPN Protocol``` -> VPN over the Internet and use the IPsec VPN protocol to create a tunnel connection
+- ```Direct Peering``` -> Putting a router in the same public data center as a google point of presence
+- ```Carrier Peering``` -> Gives you direct access from your on-premises network, through a service provider's network to google
+- ```Dedicated Interconnect``` -> Provides direct physical connections between your on-premises network and Google's network
+- ```Partner Interconnect``` -> Useful if a data center is in a physical location that can't reach a Dedicated Interconnect co location facility.
+
+---
+
+### Google Cloud storage options
+<img align = "right" width="600" src="https://user-images.githubusercontent.com/59575502/189676020-586630d9-716d-4748-a92f-a964d41f32dd.png">
+
+#### Cloud Storage ( object storage product )
+- Object storage for companies of all sizes. Store any amount of data. Retrieve it as often as you’d like.
+- Immutable and ```object versioning``` ( a new version is made with every change ) 
+- **Access Control Lists** (ACLs) = scope + permissions
+- **Lifecycle policies** (delete when you want)
+- **Advantages:**
+  - Unlimited storage
+  - Worldwide accessibility (geo-redundancy)
+  - Low latency and high durability.
+  - **HTTPS/TLS** security on server-side
+
+#### Types of storage classes: 
+- [Standard Storage](https://cloud.google.com/storage/docs/storage-classes#standard): Good for “hot” data that’s accessed frequently, including websites, streaming videos, and mobile apps.
+- [Nearline Storage](https://cloud.google.com/storage/docs/storage-classes#nearline): Low cost. Good for data that can be stored for at least 30 days, including data backup and long-tail multimedia content.
+- [Coldline Storage](https://cloud.google.com/storage/docs/storage-classes#coldline): Very low cost. Good for data that can be stored for at least 90 days, including disaster recovery.
+- [Archive Storage](https://cloud.google.com/storage/docs/storage-classes#archive): Lowest cost. Good for data that can be stored for at least 365 days, including regulatory archives.
+
+
+#### Cloud SQL
+Cloud SQL offers fully managed relational databases, including MySQL, PostgreSQL, and SQL Server as a service.
+
+<p align="center">
+<img width="1000" src="https://user-images.githubusercontent.com/59575502/189688026-0878691d-61a0-4ff1-8af2-94c2f2bfa126.png">
+</p>
+
+
+#### Cloud Spanner
+Cloud Spanner is a fully managed relational database service that scales horizontally, is strongly consistent, and speak SQL. Battle tested by Google's own mission critical applications and services, Spanner is the service that powers Google's $80 billion business.
+
+<p align="center">
+<img width="1000" src="https://user-images.githubusercontent.com/59575502/189688386-40616eb5-70e4-4f7e-be16-c4481bd4191e.png">
+</p>
+
+
+#### Firestore
+Firestore is a flexible, horizontally scalable, ```NoSQL``` cloud database for mobile, web, and server development. With Firestore, data is stored in documents and then organized into collections. Documents can contain complex nested objects in addition to subcollections. Firestore’s NoSQL queries can then be used to retrieve individual, specific documents or to retrieve all the documents in a collection that match your query parameters. Queries can include multiple, chained filters and combine filtering and sorting options. 
+
+#### Cloud Bigtable
+
+<img align = "right" width="400" src="https://user-images.githubusercontent.com/59575502/189689133-26cafc9d-3758-47b2-8910-595115fb4ea7.png">
+
+Cloud Bigtable is Google's NoSQL Big data database service. Bigtable is designed to handle massive workloads at consistent low latency and high throughput. So it's a great choice for both operational and analytical applications including internet of things, user analytics, and financial data analysis.
+
+<img align = "left" width="570" src="https://user-images.githubusercontent.com/59575502/189690347-9f2ad23a-f5f2-4ef0-9721-aec0dd17ede9.png">
+
+
+
