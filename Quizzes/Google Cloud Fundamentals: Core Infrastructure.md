@@ -193,3 +193,166 @@
   * [ ] Cloud SQL
   * [x] Cloud Spanner
   * [ ] Cloud Storage
+
+## Containers in the Cloud
+
+- Select two reasons for using containers to deploy applications. (Choose 2 responses.)
+
+  * [x] It creates consistency across development, testing, and production environments.
+  * [ ] It provides tight coupling between applications and operating systems.
+  * [ ] Allocating resources in which to run containers is not necessary.
+  * [x] Migrating workloads is simpler.
+
+- How do containers access an operating system?
+
+  * [ ] Each container has its own instance of an operating system.
+  * [x] Containers use a shared base operating system stored in a shared kernel layer.
+  * [ ] Containers use a shared base operating system stored in a Cloud Storage bucket.
+  * [ ] Containers use a shared base operating system stored in a shared runtime layer.
+
+- What is a Kubernetes pod?
+
+  * [x] A group of containers
+  * [ ] A group of VMs
+  * [ ] A group of clusters
+  * [ ] A group of nodes
+
+- What is a Kubernetes cluster?
+
+  * [ ] A group of pods that manage the administration of a Kubernetes application.
+  * [ ] A group of containers that provide high availability for applications.
+  * [x] A group of machines where Kubernetes can schedule workloads.
+
+- Where do the resources used to build Google Kubernetes Engine clusters come from?
+
+  * [ ] App Engine
+  * [ ] Bare metal servers
+  * [x] Compute Engine
+  * [ ] Cloud Storage
+
+- How do you keep your Kubernetes version updated in Google Kubernetes Engine? 
+
+  * [ ] You cannot update a running cluster. You need to create a copy of the cluster with the updated Kubernetes version.
+  * [x] The Google Kubernetes Engine team periodically performs automatic upgrades of your cluster to newer stable versions.
+  * [ ] You need to stop your cluster and manually update the Kubernetes version in your cluster.
+  * [ ] You are required to set up a cron job to periodically check the Kubernetes version in your cluster.
+
+- Anthos provides a rich set of tools for monitoring and maintaining the consistency of your applications across which of the following locations?
+
+  * [ ] Applications hosted on-premises only.
+  * [ ] Applications hosted with one cloud provider only.
+  * [ ] Applications hosted with multiple cloud providers only.
+  * [x] Applications hosted on-premises, in the cloud, or in multiple clouds.
+
+## Applications in the Cloud
+
+- App Engine is best suited to the development and hosting of which type of application?
+  * [ ] Applications that require at least one instance running at all times.
+  * [ ] A web application 
+  * [ ] A long-running batch processing application
+  * [ ] Applications that require full control of the hardware they are running on
+
+- Which statements are true about App Engine? (Select 2).
+
+  * [ ] App Engine manages the hardware and networking infrastructure required to run your code. 
+  * [ ] App Engine charges you based on the resources you preallocate instead of the resources you use.
+  * [ ] Developers who write for App Engine do not need to code their applications in any particular way to use the service.
+  * [ ] App Engine requires you to supply or code your own application load balancing and logging services.
+  * [ ] The daily billing for an App Engine application can drop to zero.
+
+- What are the advantages of using App Engine’s flexible environment instead of its standard environment? (Select 3).
+
+  * [ ] You can install third-party binaries.
+  * [ ] Google provides automatic in-place security patches.
+  * [ ] Your application can write to the local disk.
+  * [ ] Your application can execute code in background threads.
+  * [ ] You can use SSH to connect to the virtual machines on which your application runs.
+
+- Which Google Cloud service should you choose to perform business analytics and billing on a customer-facing API?
+
+  * [ ] Cloud Run API
+  * [ ] Apigee Edge
+  * [ ] Cloud Endpoints
+  * [ ] Compute Engine API
+
+- Select the managed compute platform that lets you run stateless containers through web requests or Pub/Sub events.
+
+  * [ ] Apigee Edge
+  * [ ] Cloud Endpoints
+  * [ ] Cloud Source Repositories
+  * [ ] Cloud Run
+
+- Cloud Run can only pull images from: 
+
+  * [ ] Artifact Registry
+  * [ ] Docker Hub
+  * [ ] Self-hosted registries
+  * [ ] GitHub
+
+## Developing and Deploying in the Cloud
+
+- Why would a developer choose to store source code in Cloud Source Repositories? (Select 2)
+
+  * [x] To reduce work
+  * [ ] To have total control over the hosting infrastructure
+  * [x] To keep code private to a Google Cloud project
+  * [ ] It is the only way to access your source code in a repository.
+
+- Why might a Google Cloud customer choose to use Cloud Functions?
+
+  * [ ] Their application has a legacy monolithic structure that they want to separate into microservices.
+  * [ ] Cloud Functions is a free service for hosting compute operations.
+  * [ ] Cloud Functions is the primary way to run Node.js applications in Google Cloud.
+  * [x] Their application contains event-driven code that they don't want to provision compute resources for.
+
+- Select the advantage of putting the event-driven components of your application into Cloud Functions.
+
+  * [ ] Cloud Functions eliminates the need to use a separate service to trigger application events.
+  * [x] Cloud Functions handles scaling these components seamlessly.
+  * [ ] In Cloud Functions, code can be written in C# or C++.
+  * [ ] In Cloud Functions, processing is always free of charge.
+
+- Why might a Google Cloud customer choose to use Terraform?
+
+  * [ ] Terraform can be used as an infrastructure management system for Kubernetes pods.
+  * [ ] Terraform can be used to enforce maximum resource utilization and spending limits on your Google Cloud resources.
+  * [ ] Terraform can be used as a version-control system for your Google Cloud infrastructure layout.
+  * [x] Terraform can be used as an infrastructure management system for Google Cloud resources.
+
+## Logging and Monitoring in the Cloud
+
+- There are “Four Golden Signals” that measure a system’s performance and reliability. What are they?
+
+  * [ ] Availability, durability, scalability, resiliency
+  * [ ] Latency, traffic, saturation, errors
+  * [ ] Get, post, put, delete
+  * [ ] KPIs, SLIs, SLOs, SLAs
+
+- Which definition best describes a service level indicator (SLI)? 
+
+  * [ ] A time-bound measurable attribute of a service
+  * [ ] A percentage goal of a measure you intend your service to achieve
+  * [ ] A contract with your customers regarding service performance
+  * [ ] A key performance indicator; for example, clicks per session or customer signups
+
+- Which option describes a commitment made to your customers that your systems and applications will have only a certain amount of “downtime”?
+
+  * [ ] Service level indicator
+  * [ ] Service level objective
+  * [ ] Key performance indicator
+  * [ ] Service level agreement
+
+- You want to create alerts on your Google Cloud resources, such as when health checks fail. Which is the best Google Cloud product to use?
+
+  * [ ] Cloud Debugger 
+  * [ ] Cloud Monitoring
+  * [ ] Cloud Functions
+  * [ ] Cloud Trace
+
+- Select the two correct statements about Cloud Logging.
+
+  * [ ] Cloud Logging lets you define metrics based on your logs.
+  * [ ] Cloud Logging requires the use of a third-party monitoring agent.
+  * [ ] Cloud Logging requires you to store your logs in BigQuery or Cloud Storage.
+  * [ ] Cloud Logging lets you view logs from your applications and filter and search on them.
+  * [ ] Cloud Logging lets you define uptime checks.
