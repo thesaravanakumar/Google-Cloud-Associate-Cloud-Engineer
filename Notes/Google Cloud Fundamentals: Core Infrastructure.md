@@ -212,11 +212,50 @@ Firestore is a flexible, horizontally scalable, ```NoSQL``` cloud database for m
 
 #### Cloud Bigtable
 
-<img align = "right" width="400" src="https://user-images.githubusercontent.com/59575502/189689133-26cafc9d-3758-47b2-8910-595115fb4ea7.png">
-
 Cloud Bigtable is Google's NoSQL Big data database service. Bigtable is designed to handle massive workloads at consistent low latency and high throughput. So it's a great choice for both operational and analytical applications including internet of things, user analytics, and financial data analysis.
 
-<img align = "left" width="570" src="https://user-images.githubusercontent.com/59575502/189690347-9f2ad23a-f5f2-4ef0-9721-aec0dd17ede9.png">
+<p align="center">
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/189877918-42ff8119-2938-4b76-a35c-31fc4d25f9df.png">
+</p>
 
+---
+### Introduction to containers
 
+<p align="center">
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/189879270-586bc06d-1084-477b-be2c-39f5c384981c.jpg">
+</p>
+A Pod is the smallest unit in Kubernetes that you can create or deploy. It represents a running process on your cluster as either a component of replication or an entire app.
+
+- ```kubectl run``` -> Starts a deployment with a container running inside a Pod.
+- ```kubectl get pods``` -> List of the running pods in a project.
+- ```kubectl scale``` -> To scale of deployment.
+- ```kubectl get services``` -> To get the external IP of the service
+- ```kubectl rollout, kubectl apply``` -> Update your container
+
+### Google Kubernetes Engine
+GKE is a Google-hosted managed Kubernetes service in the Cloud.
+```gcloud container clusters create k1``` -> To start up kubernetes is on a cluster in GKE.
+
+<p align="center">
+ <img width="1200" src="https://user-images.githubusercontent.com/59575502/189883468-98e9f52e-9746-4a6f-b28d-8001ea12b95f.jpg">
+</p>
+
+### Anthos
+
+<img align = "left" width="600" src="https://user-images.githubusercontent.com/59575502/189885982-03b1576b-fcff-4be6-9bc2-a6111e834361.png">
+
+- Anthos is a ```hybrid and multi cloud``` solution powered by the latest innovations in distributed systems and service management software from Google.
+- The Anthos framework rests on ```Kubernetes``` and ```GKE On-Prem```.
+- Anthos also provides a rich set of tools for ```monitoring and maintaining``` the consistency of your applications across all of your network, whether on premises in the cloud or in multiple clouds.
+
+### Development in the cloud
+#### Cloud Source Repositories
+Cloud Source Repositories provides full featured Git repositories hosted on Google Cloud that support the collaborative development of any application or service, including those that run on App Engine and Compute Engine. With Cloud Source Repositories, you can have any number of private Git repositories.
+
+<img width="600" height="250" align = "right" src="https://user-images.githubusercontent.com/59575502/189898777-d10b12c8-f62c-4025-b9cf-40fb7f3519da.png">
+
+#### Cloud Functions
+Cloud Functions allows you to **trigger** your code from Google Cloud, Firebase, and Google Assistant, or call it directly from any web, mobile, or backend application via HTTP. You are only billed for your function's execution time, metered to the nearest 100 milliseconds. You pay nothing when your function is idle.
+
+### Logging and monitoring in the cloud
 
