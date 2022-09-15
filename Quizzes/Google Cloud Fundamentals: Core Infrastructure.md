@@ -248,30 +248,30 @@
 
 - App Engine is best suited to the development and hosting of which type of application?
   * [ ] Applications that require at least one instance running at all times.
-  * [ ] A web application 
+  * [x] A web application 
   * [ ] A long-running batch processing application
   * [ ] Applications that require full control of the hardware they are running on
 
 - Which statements are true about App Engine? (Select 2).
 
-  * [ ] App Engine manages the hardware and networking infrastructure required to run your code. 
+  * [x] App Engine manages the hardware and networking infrastructure required to run your code. 
   * [ ] App Engine charges you based on the resources you preallocate instead of the resources you use.
   * [ ] Developers who write for App Engine do not need to code their applications in any particular way to use the service.
   * [ ] App Engine requires you to supply or code your own application load balancing and logging services.
-  * [ ] The daily billing for an App Engine application can drop to zero.
+  * [x] The daily billing for an App Engine application can drop to zero.
 
 - What are the advantages of using App Engine’s flexible environment instead of its standard environment? (Select 3).
 
-  * [ ] You can install third-party binaries.
+  * [x] You can install third-party binaries.
   * [ ] Google provides automatic in-place security patches.
-  * [ ] Your application can write to the local disk.
+  * [x] Your application can write to the local disk.
   * [ ] Your application can execute code in background threads.
-  * [ ] You can use SSH to connect to the virtual machines on which your application runs.
+  * [x] You can use SSH to connect to the virtual machines on which your application runs.
 
 - Which Google Cloud service should you choose to perform business analytics and billing on a customer-facing API?
 
   * [ ] Cloud Run API
-  * [ ] Apigee Edge
+  * [x] Apigee Edge
   * [ ] Cloud Endpoints
   * [ ] Compute Engine API
 
@@ -280,11 +280,11 @@
   * [ ] Apigee Edge
   * [ ] Cloud Endpoints
   * [ ] Cloud Source Repositories
-  * [ ] Cloud Run
+  * [x] Cloud Run
 
 - Cloud Run can only pull images from: 
 
-  * [ ] Artifact Registry
+  * [x] Artifact Registry
   * [ ] Docker Hub
   * [ ] Self-hosted registries
   * [ ] GitHub
