@@ -324,13 +324,13 @@
 - There are “Four Golden Signals” that measure a system’s performance and reliability. What are they?
 
   * [ ] Availability, durability, scalability, resiliency
-  * [ ] Latency, traffic, saturation, errors
+  * [x] Latency, traffic, saturation, errors
   * [ ] Get, post, put, delete
   * [ ] KPIs, SLIs, SLOs, SLAs
 
 - Which definition best describes a service level indicator (SLI)? 
 
-  * [ ] A time-bound measurable attribute of a service
+  * [x] A time-bound measurable attribute of a service
   * [ ] A percentage goal of a measure you intend your service to achieve
   * [ ] A contract with your customers regarding service performance
   * [ ] A key performance indicator; for example, clicks per session or customer signups
@@ -340,19 +340,19 @@
   * [ ] Service level indicator
   * [ ] Service level objective
   * [ ] Key performance indicator
-  * [ ] Service level agreement
+  * [x] Service level agreement
 
 - You want to create alerts on your Google Cloud resources, such as when health checks fail. Which is the best Google Cloud product to use?
 
   * [ ] Cloud Debugger 
-  * [ ] Cloud Monitoring
+  * [x] Cloud Monitoring
   * [ ] Cloud Functions
   * [ ] Cloud Trace
 
 - Select the two correct statements about Cloud Logging.
 
-  * [ ] Cloud Logging lets you define metrics based on your logs.
+  * [x] Cloud Logging lets you define metrics based on your logs.
   * [ ] Cloud Logging requires the use of a third-party monitoring agent.
   * [ ] Cloud Logging requires you to store your logs in BigQuery or Cloud Storage.
-  * [ ] Cloud Logging lets you view logs from your applications and filter and search on them.
+  * [x] Cloud Logging lets you view logs from your applications and filter and search on them.
   * [ ] Cloud Logging lets you define uptime checks.
