@@ -1,4 +1,4 @@
-### Interacting with Google Cloud
+## Interacting with Google Cloud
 - Which of the following does not allow you to interact with Google Cloud?
 
   * [ ] REST-based API
@@ -13,7 +13,7 @@
   * [ ] The Cloud Console is a command-line tool, while Cloud Shell is a graphical user interface
   * [ ] There is no difference as these tools are 100% identical.
 
-### Virtual Networks
+## Virtual Networks
 - In Google Cloud, what is the minimum number of IP addresses that a VM instance needs?
 
   * [x] One: Only an internal IP address
@@ -34,7 +34,7 @@
   * [ ] Tags on firewall rules control which ephemeral IP addresses VMs will receive.
   * [x] When a VM is created with a matching tag, the firewall rules apply irrespective of the IP address it is assigned.
 
-### Virtual Machines
+## Virtual Machines
 - Which statement is true of Virtual Machine Instances in Compute Engine?
 
   * [ ] All Compute Engine VMs are single tenancy and do not share CPU hardware.
