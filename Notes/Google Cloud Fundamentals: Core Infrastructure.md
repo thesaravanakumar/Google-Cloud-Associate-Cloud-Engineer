@@ -255,7 +255,55 @@ Cloud Source Repositories provides full featured Git repositories hosted on Goog
 <img width="600" height="250" align = "right" src="https://user-images.githubusercontent.com/59575502/189898777-d10b12c8-f62c-4025-b9cf-40fb7f3519da.png">
 
 #### Cloud Functions
-Cloud Functions allows you to **trigger** your code from Google Cloud, Firebase, and Google Assistant, or call it directly from any web, mobile, or backend application via HTTP. You are only billed for your function's execution time, metered to the nearest 100 milliseconds. You pay nothing when your function is idle.
+- Event driven serverless compute platform.
+- Scales automatically.
+- Cloud Functions allows you to **trigger** your code from Google Cloud, Firebase, and Google Assistant, or call it directly from any web, mobile, or backend application via HTTP. You are only billed for your function's execution time, metered to the nearest 100 milliseconds. You pay nothing when your function is idle.
 
-### Logging and monitoring in the cloud
+### Applications in the cloud
+#### App Engine
+- App Engine is a cloud computing platform as a service, fully managed, serverless platform for developing and hosting web applications in Google-managed data centers at scale. 
+- Applications are sandboxed and run across multiple servers. With App Engine, there are no servers to provision or maintain. 
+- Lets app developers build scalable web and mobile back ends in any programming language on a fully managed serverless platform.
 
+There are two types of [App Engine environments](https://cloud.google.com/appengine/docs/the-appengine-environments), ```standard``` and ```flexible``` 
+
+<p align="center">
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/191241036-484de5cd-6bb9-4978-ade8-a3e2db062e83.png">
+<img width="600" align="right" src="https://user-images.githubusercontent.com/59575502/191240058-785474cd-8e29-4b1d-99fa-a1d980594195.png">
+</p>
+
+#### Google Cloud API management tools
+- Cloud Endpoints
+- Apigee Edge
+
+</br> 
+</br> 
+
+> Backend services for Apigee Edge don't have to be in Google Cloud. As a result, engineers also often use it to take apart legacy applications. Instead of replacing a large important application in one move, they can use Apigee Edge to peel off its services individually instead. This allows them to stand up microservices to implement each in turn until the legacy application can finally be retired
+
+<p align="center">
+ <img width="1200" src="https://user-images.githubusercontent.com/59575502/191251989-00f56449-e825-4b46-abd1-84d185e676d2.png">
+</p>
+
+#### Cloud Run
+
+<p align="center">
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/191254270-18bd34ba-8455-4c86-a30b-0b9ad0834e3c.png">
+</p>
+
+- Can allocate up to ```four vCPUs``` and ```eight gigabytes of memory```
+- Once you've deployed your container image, you'll get a unique ```HTTPS URL``` back. Cloud Run then starts your container on demand to handle requests, and ensures that all incoming requests are handled by **dynamically adding and removing containers**
+- With Cloud Run, You can use a ```container-based``` workflow as well as a ```source-based``` workflow. </br>
+```Buildpacks``` -> Cloud Run then builds your source and packages the application into a container image for you
+
+### Logging and Monitoring in the Cloud
+There are **four golden signals** that measure a system's performance and reliability.
+- ```Latency``` -> measures how long it takes a particular part of a system to return a result.
+- ```Traffic``` -> measures how many requests are reaching your system.
+- ```Saturation``` -> measures how close to capacity a system is.
+- ```Errors``` -> measure system failures or other issues.
+
+Types of **targets** set for systems four golden signals metrics. 
+- ```Service level indicators (SLI)``` -> carefully selected monitoring metrics that measure one aspect of a services reliability.
+- ```Service level objective (SLO)``` -> combines a service level indicator with a target reliability. 
+- ```Service-level agreements (SLA)``` -> commitments made to your customers that your systems and applications will only have a certain amount of downtime.
