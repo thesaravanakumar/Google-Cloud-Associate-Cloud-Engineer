@@ -130,4 +130,118 @@ The VPC network has been configured to meet the DNS, routing, and firewall netwo
 
 ---
 
-### Compute Engine
+### [Compute Engine](https://cloud.google.com/compute/docs)
+Infrastructure as a service (IaaS)
+Predefined or custom machine types:
+  - vCPUs (cores) and memory (RAM)
+  - Storage
+      - Zonal or Regional persistant disk (HDD or SSD)
+      - Local SSD
+      - Cloud Storage
+  - Networking
+  - Linux or windows
+
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/191698038-59fd2dc5-5eba-4482-a684-81ea904be6bc.png">
+
+#### VM Access
+- Linux VM (SSH)
+    - Require firewall rule to allow tcp:22
+    - SSH from console or cloud shell via cloud SDK
+
+- Windows VM (RDP)
+    - Require firewall rule to allow tcp:3389
+    - Require setting the windows password.
+
+#### VM Lifecycle
+
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/191705232-5d34d8b9-db38-44df-aa11-4a0b835b2f9b.png">
+
+<div align="center">
+
+#### [Machine types](https://cloud.google.com/compute/docs/machine-types)
+
+
+<img width="803" src="https://user-images.githubusercontent.com/59575502/191707597-8df8bedd-76de-4611-a991-315414161856.png">
+</div>
+
+### Compute VM Options
+#### [Preemptible VMs](https://cloud.google.com/compute/docs/instances/preemptible)
+A preemptible VM is an instance that you can create and run at a much lower cost than normal instances.
+- Low Price
+- Terminate at any time
+    - preemptible VM only going to live for up to 24 hours (max)
+    - 30-second notification before termination (not garanteed)
+- No live migrations nor automatic restarts
+
+#### [Spot VMs](https://cloud.google.com/compute/docs/instances/spot)
+Spot VMs are the latest version of preemptible VMs.
+- Same price as preemptible
+- No minimum or maximum run time
+- Spot VMs are finite Compute Engine resources, so they might not always be available.
+- No live migrations nor automatic restarts
+
+#### [Sole-Tenant Node](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes)
+A ```sole-tenant node``` is a physical Compute Engine server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware.
+
+#### [Shielded VMs](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm)
+Shielded VMs offer verifiable integrity to your VM instances, so you can be confident that your instances haven't been compromised by boot or kernel-level malware or rootkits.
+- secure boot
+- virtual trusted platform modules (vTPM)
+- Integrity monitoring
+
+#### [Confidential VMs](https://cloud.google.com/compute/confidential-vm/docs/about-cvm#confidential-vm)
+Confidential VMs allows you to encrypt data in use, while it's been processed.
+- Easy-to-use without making any code changes or having to compromise performance.
+- It is a type of ```N2D Compute Engine VM``` instance running on hosts based on the second generation of AMD Epyc processors, code-named "Rome".
+- Compute-heavy workloads, with high memory capacity, high throughput, and support for parallel workloads.
+
+#### What is an image?
+- Boot loader
+- OS
+- File system structure
+- Software
+- Customizations
+
+### [Disk Options](https://cloud.google.com/compute/docs/disks)
+Every single VM comes with a single root persistent disk because you're choosing a base image to have it loaded on. This image is ```bootable``` in that it can attach to VM and boot from it. It is ```durable``` in that it can survive if the VM terminates. To have a boot disk survive a VM deletion, you need to disable the ```Delete boot disk when instance is deleted``` option in the instance properties
+- ```Zonal persistent disk``` -> Efficient, reliable block storage.
+- ```Regional persistent disk``` -> Regional block storage replicated in two zones.
+- ```Local SSD``` -> High performance, transient, local block storage.
+- ```Cloud Storage buckets``` -> Affordable object storage.
+- ```Filestore``` -> High performance file storage for Google Cloud users.
+
+<div align="center">
+  
+[Persistent Disk](https://cloud.google.com/compute/docs/disks#pdspecs) | [Local SSDs](https://cloud.google.com/compute/docs/disks#localssds) | [Cloud Storage buckets](https://cloud.google.com/compute/docs/disks#gcsbuckets) | [Firestore](https://cloud.google.com/firestore/docs)
+  
+ </div>
+ 
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/191743475-9dbaf893-c426-4930-b165-cb1acd0b5ac1.png">
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/191743490-d307ccbb-5d23-4dce-a93a-d3ae15873263.png">
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/191743496-8887af29-5d8c-42c8-a0d3-dd502b09e378.png">
+
+### Common Compute Engine actions
+
+<img width="600" align="right" src="https://user-images.githubusercontent.com/59575502/191748781-a88a4009-f89c-4845-8935-804209f3d60d.png">
+
+#### Metadata and Scripts
+Every VM instance stores its metadata on a ```metadata server```. The metadata server is particularly useful in combination with startup and shutdown scripts because you can use the metadata server to programmatically get unique information about an instance without additional authorization. 
+
+</br>
+<img width="600" align="right" src="https://user-images.githubusercontent.com/59575502/191749860-67e1ca0a-2601-41ca-944c-a17ecdc34b3d.png">
+</br>
+
+#### Move a VM into new Zone
+For geographical reasons or because a zone has been deprecated you can move a VM even if one of these following scenarios apply,
+- The VM instance is in a termination stage 
+- The VM instance is a shielded VM that uses UEFI's firmware.
+To move your VM, you must shut down the VM, move it to its destination zone or region, and then restart it. After you move your VM, update any references that you have pointing to the original resource, such as any target VMs or target pools that point to the earlier VM.
+
+<img width="600" align="right" src="https://user-images.githubusercontent.com/59575502/191762525-0f0f8767-43d5-427b-bd18-b6b6ba8eba73.png">
+
+##### What is snapshots?
+- To backup ```critical data``` into a durable storage solution to meet application, availability, and recovery requirements. 
+- These are stored in ```Cloud Storage```
+- Snapshots can also be used to ```migrate data between zones```.
+
+
