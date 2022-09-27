@@ -51,7 +51,7 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 ### **Coursera:**
 * [ ] [Architecting with Google Compute Engine Specialization](https://www.coursera.org/specializations/gcp-architecture)
   * [x] [Google Cloud Fundamentals: Core Infrastructure](https://www.coursera.org/learn/gcp-fundamentals?specialization=gcp-architecture)
-  * [ ] [Essential Google Cloud Infrastructure: Foundation](https://www.coursera.org/learn/gcp-infrastructure-foundation?specialization=gcp-architecture)
+  * [x] [Essential Google Cloud Infrastructure: Foundation](https://www.coursera.org/learn/gcp-infrastructure-foundation?specialization=gcp-architecture)
   * [ ] [Essential Google Cloud Infrastructure: Core Services](https://www.coursera.org/learn/gcp-infrastructure-core-services?specialization=gcp-architecture)
   * [ ] [Elastic Google Cloud Infrastructure: Scaling and Automation](https://www.coursera.org/learn/gcp-infrastructure-scaling-automation?specialization=gcp-architecture)
   * [ ] [Reliable Google Cloud Infrastructure: Design and Process](https://www.coursera.org/learn/cloud-infrastructure-design-process?specialization=gcp-architecture)
