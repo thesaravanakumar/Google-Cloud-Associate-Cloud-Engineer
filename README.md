@@ -52,12 +52,12 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 * [ ] [Architecting with Google Compute Engine Specialization](https://www.coursera.org/specializations/gcp-architecture)
   * [x] [Google Cloud Fundamentals: Core Infrastructure](https://www.coursera.org/learn/gcp-fundamentals?specialization=gcp-architecture)
   * [x] [Essential Google Cloud Infrastructure: Foundation](https://www.coursera.org/learn/gcp-infrastructure-foundation?specialization=gcp-architecture)
-  * [ ] [Essential Google Cloud Infrastructure: Core Services](https://www.coursera.org/learn/gcp-infrastructure-core-services?specialization=gcp-architecture)
+  * [x] [Essential Google Cloud Infrastructure: Core Services](https://www.coursera.org/learn/gcp-infrastructure-core-services?specialization=gcp-architecture)
   * [ ] [Elastic Google Cloud Infrastructure: Scaling and Automation](https://www.coursera.org/learn/gcp-infrastructure-scaling-automation?specialization=gcp-architecture)
   * [ ] [Reliable Google Cloud Infrastructure: Design and Process](https://www.coursera.org/learn/cloud-infrastructure-design-process?specialization=gcp-architecture)
 * [ ] [Preparing for Google Cloud Certification: Cloud Engineer Professional Certificate](https://www.coursera.org/professional-certificates/cloud-engineering-gcp)
   * [ ] [Architecting with Google Kubernetes Engine: Foundations](https://www.coursera.org/learn/foundations-google-kubernetes-engine-gke?specialization=cloud-engineering-gcp)
-  * [ ] [Preparing for Your Associate Cloud Engineer Journey](https://www.coursera.org/learn/preparing-cloud-associate-cloud-engineer-exam?specialization=cloud-engineering-gcp)
+  * [x] [Preparing for Your Associate Cloud Engineer Journey](https://www.coursera.org/learn/preparing-cloud-associate-cloud-engineer-exam?specialization=cloud-engineering-gcp)
                   
 <a name="CloudSkillBoost"></a>
 ### **Cloud Skill Boost:**
