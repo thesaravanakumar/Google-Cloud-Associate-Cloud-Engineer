@@ -158,4 +158,6 @@ OpenAPI is an industry-standard for exposing APIs to clients
 <img width="800" src="https://user-images.githubusercontent.com/59575502/194771082-ef7df977-a6ea-456b-8e64-03440bb385f1.png">  
 </div>
 
+</br> 
+
 > For VPC Networking, network connectivity products (peering, Cloud VPN, and Cloud Interconnect) and other topics check my notes in other files.
