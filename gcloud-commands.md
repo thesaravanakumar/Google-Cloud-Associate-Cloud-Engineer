@@ -92,3 +92,77 @@ To see details about the CPUs installed on your VM
 ```lscpu```
 
 
+## GCLOUD BASICS
+```
+# Init of the tool
+gcloud init
+
+# Gcloud structure
+$ gcloud compute instances  list
+# |------base--| |--who--| |-what-|
+
+$ gcloud components install  kubectl # exception
+# |------base-----| |-what-| |-who-|
+
+# Set the project
+gcloud config set project PROJECT-NAME
+
+# Bucket Versioning (NB: is gsutil)
+gsutil versioning set (on|off) gs://<bucket_name>...
+gsutil versioning get gs://<bucket_name>...
+
+# List VM
+gcloud compute instances list [--zones] [--format json]
+
+# Create VM with boot disk
+gcloud compute instances create VM_NAME \
+    --source-snapshot=BOOT_SNAPSHOT_NAME \
+    --boot-disk-size=BOOT_DISK_SIZE \
+    --boot-disk-type=BOOT_DISK_TYPE \
+    --boot-disk-device-name=BOOT_DISK_NAME
+
+# Install components (e.g. kubectl, minikube, kustomize, bq)
+gcloud components list
+gcloud components install PRODUCT
+
+# Set a default Region
+gcloud config set compute/region europe-west1
+
+# Create Compute Engine persistent disks
+gcloud compute disks create my-disk-1 my-disk-2 --zone=us-east1-a
+
+# Resize a cluster nodes
+gcloud container clusters resize sample-cluster --num-nodes=2
+
+# Add IAM policy binding
+gcloud projects add-iam-policy-binding example-project-id-1  --member='user:test-user@gmail.com' --role='roles/editor'
+
+# Delete `default` VPC (NB: start with 'compute')
+gcloud compute networks delete defaulta
+
+# Create VPC
+gcloud compute networks create
+
+# gcloud Wide Flags
+--account         # GCP user account to use for invocation
+--project         # The Google Cloud Platform project ID to use for this invocation
+--billing-project # project that will be charged quota for operations performed
+--configuration   # The configuration to use for this command invocation
+--flags-file      # A YAML or JSON file that specifies a --flag:value dictionary
+--flatten         # Use to "flatten" resources list
+--format          # Set the format for printing command output resources
+--log-http        # Log all HTTP server requests and responses to stderr
+--trace-token     # Token used to route traces of service requests for investigation of issues
+--verbosity
+--quiet
+--impersonate-service-account
+
+# List VPC networks
+gcloud compute networks list
+
+# List existing clusters for running containers
+gcloud container clusters list
+
+# Describe cluster image info (NB: is gcloud not kubectl)
+gcloud container images describe gcr.io/myproject/myimage:tag
+```
