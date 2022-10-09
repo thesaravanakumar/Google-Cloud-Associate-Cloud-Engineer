@@ -76,8 +76,7 @@ By default, all projects come with a built-in Compute Engine default service acc
 
 ## Storage
 
-<img width="1200" src="https://user-images.githubusercontent.com/59575502/194298655-91a878ce-16bd-427c-96bb-bfcbd4db23da.png">
-
+<img width="1200" src="https://user-images.githubusercontent.com/59575502/194769910-9a01eaaa-fbb8-435d-949d-48bf632fa4b7.png">
 <img width="1200" src="https://user-images.githubusercontent.com/59575502/194298767-a4d67973-0b70-4dbf-8694-6047796fd27c.png">
 
 ### Cloud Storage
