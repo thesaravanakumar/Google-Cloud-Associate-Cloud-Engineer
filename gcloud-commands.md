@@ -21,76 +21,47 @@ The Secure Shell Protocol is a cryptographic network protocol for operating netw
 - Web preview functionality
 - Built-in authorization for access to resources and instances
 
-### CLoud Strorage Bucket
-</br>
+## Getting started
+Get going with the gcloud CLI.
+- [gcloud init](https://cloud.google.com/sdk/gcloud/reference/init): Initialize, authorize, and configure the gcloud CLI.
+- [gcloud version](https://cloud.google.com/sdk/gcloud/reference/version): Display version and installed components.
+- [gcloud components install](https://cloud.google.com/sdk/gcloud/reference/components/install): Install specific components.
+- [gcloud components update](https://cloud.google.com/sdk/gcloud/reference/components/update): Update your gcloud CLI to the latest version.
+- [gcloud config set project](https://cloud.google.com/sdk/gcloud/reference/config/set): Set a default Google Cloud project to work on.
+- [gcloud info](https://cloud.google.com/sdk/gcloud/reference/info): Display current gcloud CLI environment details.
 
-```gsutil mb gs://<BUCKET_NAME>``` -> make bucket
-</br>
+### Help
+gcloud CLI is happy to help.
 
-```gsutil mb -l $LOCATION gs://$DEVSHELL_PROJECT_ID``` -> bucket named after your project ID
+- [gcloud help](https://cloud.google.com/sdk/gcloud/reference/help): Search the gcloud CLI reference documents for specific terms.
+- [gcloud feedback](https://cloud.google.com/sdk/gcloud/reference/feedback): Provide feedback to the gcloud CLI team.
+- [gcloud topic](https://cloud.google.com/sdk/gcloud/reference/topic): Supplementary help material for non-command topics like accessibility, filtering, and formatting.
 
+### Personalization
+Make the gcloud CLI your own; personalize your configuration with properties.
 
-Copy the file uploaded into Cloud Shell temp VM to bucket you created.
-```gsutil cp [MY_FILE] gs://[BUCKET_NAME]```
+- [gcloud config set](https://cloud.google.com/sdk/gcloud/reference/config/set): Define a property (like compute/zone) for the current configuration.
+- [gcloud config get-value](): Fetch the value of a gcloud CLI property.
+- [gcloud config list](https://cloud.google.com/sdk/gcloud/reference/config/list): Display all the properties for the current configuration.
+- [gcloud config configurations create](https://cloud.google.com/sdk/gcloud/reference/config/configurations/create): Create a new named configuration.
+- [gcloud config configurations list](https://cloud.google.com/sdk/gcloud/reference/config/configurations/list): Display a list of all available configurations.
+- [gcloud config configurations activate](https://cloud.google.com/sdk/gcloud/reference/config/configurations/activate): Switch to an existing named configuration.
 
-Retrieve a banner image from a publicly accessible Cloud Storage location:
-</br>
-```gsutil cp gs://cloud-training/gcpfci/my-excellent-blog.png my-excellent-blog.png```
+### Authorization and Credentials
+Grant and revoke authorization to the gcloud CLI and manage credentials.
 
-Copy the banner image to your newly created Cloud Storage bucket:
-</br>
-```gsutil cp my-excellent-blog.png gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png```
+- [gcloud auth login](https://cloud.google.com/sdk/gcloud/reference/auth/login): Authorize Google Cloud access for the gcloud CLI with Google Cloud user credentials and set the current account as active.
+- [gcloud auth activate-service-account](https://cloud.google.com/sdk/gcloud/reference/auth/activate-service-account): Authorize Google Cloud access similar to gcloud auth login but with service account credentials.
+- [gcloud auth application-default](https://cloud.google.com/sdk/gcloud/reference/auth/application-default): Manage your Application Default Credentials (ADC) for Cloud Client Libraries.
+- [gcloud auth list](https://cloud.google.com/sdk/gcloud/reference/auth/list): List all credentialed accounts.
+- [gcloud auth print-access-token](https://cloud.google.com/sdk/gcloud/reference/auth/print-access-token): Display the current account's access token.
+- [gcloud auth revoke](https://cloud.google.com/sdk/gcloud/reference/auth/revoke): Remove access credentials for an account.
 
-Modify the Access Control List of the object you just created so that it is readable by everyone:
-</br>
-```gsutil acl ch -u allUsers:R gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png```
+### Projects
+Manage project access policies.
 
-
-### VPC 
-To list the available VPC networks
-</br>
-```gcloud compute networks list```
-
-To list the available VPC subnets (sorted by VPC network)
-</br>
-```gcloud compute networks subnets list --sort-by=NETWORK```
-
-To create the VPC network,
-</br>
-```gcloud compute networks create [VPC_NAME] --subnet-mode=custom```
-
-To create the [VPC_NAME] subnet
-</br>
-```gcloud compute networks subnets create [SUBNET_NAME] --network=[VPC_NAME] --region=us-central1 --range=172.16.0.0/24```
-
-To create the [VPC_NAME] to allow-icmp-ssh-rdp firewall rule
-</br>
-```gcloud compute firewall-rules create [VPC_NAME] --direction=INGRESS --priority=1000 --network=privatenet --action=ALLOW --rules=icmp,tcp:22,tcp:3389 --source-ranges=0.0.0.0/0```
-
-To list all the firewall rules (sorted by VPC network)
-</br>
-```gcloud compute firewall-rules list --sort-by=NETWORK```
-
-To create the VM instance
-</br>
-```gcloud compute instances create [VM_NAME] --zone=us-central1-c --machine-type=f1-micro --subnet=[SUBNET_NAME] --image-family=debian-10 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=privatenet-us-vm```
-
-To list all the VM instances (sorted by zone)
-</br>
-```gcloud compute instances list --sort-by=ZONE```
-
-To see information about unused and used memory and swap space on your custom VM
-```free```
-
-To see details about the RAM installed on your VM
-```sudo dmidecode -t 17```
-
-To verify the number of processors
-```nproc```
-
-To see details about the CPUs installed on your VM
-```lscpu```
-
+- [gcloud projects describe](https://cloud.google.com/sdk/gcloud/reference/projects/describe): Display metadata for a project (including its ID).
+- [gcloud projects add-iam-policy-binding](https://cloud.google.com/sdk/gcloud/reference/projects/add-iam-policy-binding): Add an IAM policy binding to a specified project.
 
 ## GCLOUD BASICS
 ```
@@ -165,4 +136,138 @@ gcloud container clusters list
 
 # Describe cluster image info (NB: is gcloud not kubectl)
 gcloud container images describe gcr.io/myproject/myimage:tag
+
 ```
+
+    
+| **Name**                 | **Summary**                                                          |
+|:------------------------:|:--------------------------------------------------------------------:|
+| Check version & settings | ```gcloud version```, ```gcloud info```, ```gcloud components list```                  |
+| Init profile             | ```gcloud init``` This will ask you to open an OpenID URL                  |
+| List all zones           | ```gcloud compute zones list```                                            |
+| Upgrade local SDK        | ```gcloud components update```, ```gcloud components update --version 219.0.1``` |
+
+### BUCKET BASIC
+
+| **Name**                   | **Summary**                                                              |
+|:--------------------------:|:------------------------------------------------------------------------:|
+| List all buckets and files | ```gsutil ls, gsutil ls -lh gs://<bucket-name>```                            |
+| Download file              | ```gsutil cp gs://<bucket-name>/<dir-path>/package-1.1.tgz .```                |
+| Upload file                | ```gsutil cp <filename> gs://<bucket-name>/<directory>/```                     |
+| Cat file                   | ```gsutil cat gs://<bucket-name>/<filepath>/```                                |
+| Delete file                | ```gsutil rm gs://<bucket-name>/<filepath>```                                  |
+| Move file                  | ```gsutil mv <src-filepath> gs://<bucket-name>/<directory>/<dest-filepath>```  |
+| Copy folder                | ```gsutil cp -r ./conf gs://<bucket-name>/```                                  |
+| Show disk usage            | ```gsutil du -h gs://<bucket-name/<directory>```                               |
+| Create bucket              | ```gsutil mb gs://<bucket-name>```                                             |
+| Caculate file sha1sum      | ```gsha1sum syslog-migration-10.0.2.tgz, shasum syslog-migration-10.0.2.tgz``` |
+| Gsutil help                | ```gsutil help```, gsutil help cp, gsutil help options                         |
+
+### GCP PROJECT   
+| **Name**          | **Summary**                                    |
+|:-----------------:|:----------------------------------------------:|
+| List projects     | ```gcloud config list```, ```gcloud config list project``` |
+| Show project info | ```gcloud compute project-info describe```           |
+| Switch project    | ```gcloud config set project <project-id>```         |
+    
+### GKE    
+| **Name**                                | **Summary**                                              |
+|:---------------------------------------:|:--------------------------------------------------------:|
+| Display a list of credentialed accounts | ```gcloud auth list```                                         |
+| Set the active account                  | ```gcloud config set account <ACCOUNT>```                      |
+| Set kubectl context                     | ```gcloud container clusters get-credentials <cluster-name>``` |
+| Change region                           | ```gcloud config set compute/region us-west```                 |
+| Change zone                             | ```gcloud config set compute/zone us-west1-b```                |
+| List all container clusters             | ```gcloud container clusters list```                           |
+    
+### IAM
+| **Name**                                | **Summary**                                                     |
+|:---------------------------------------:|:---------------------------------------------------------------:|
+| Authenticate client                     | ```gcloud auth activate-service-account --key-file <key-file>```      |
+| Display a list of credentialed accounts | ```gcloud auth list```                                                |
+| Set the active account                  | ```gcloud config set account <ACCOUNT>```                             |
+| Auth to GCP Container Registry          | ```gcloud auth configure-docker```                                    |
+| Print token for active account          | ```gcloud auth print-access-token```, ```gcloud auth print-refresh-token``` |
+| Revoke previous generated credential    | ```gcloud auth <application-default> revoke```                        |
+
+### BUCKET SECURITY
+| **Name**                | **Summary**                                                                         |
+|:-----------------------:|:-----------------------------------------------------------------------------------:|
+| Make all files readable | ```gsutil -m acl set -R -a public-read gs://<bucket-name>/```                             |
+| Config auth             | ```gsutil config -a```                                                                    |
+| Grant bucket access     | ```gsutil iam ch user:denny@gmail.com:objectCreator,objectViewer gs://<bucket-name>```    |
+| Remove bucket access    | ```gsutil iam ch -d user:denny@gmail.com:objectCreator,objectViewer gs://<bucket-name>``` |
+
+### VM
+| **Name**           | **Summary**                                                                                             |
+|:------------------:|:-------------------------------------------------------------------------------------------------------:|
+| List all instances | ```gcloud compute instances list, gcloud compute instance-templates list```                                   |
+| Show instance info | ```gcloud compute instances describe "<instance-name>" --project "<project-name>" --zone "us-west2-a"```      |
+| Stop an instance   | ```gcloud compute instances stop instance-2```                                                                |
+| Start an instance  | ```gcloud compute instances start instance-2```                                                               |
+| Create an instance | ```gcloud compute instances create vm1 --image image-1 --tags test --zone "<zone>" --machine-type f1-micro``` |
+| SSH to instance    | ```gcloud compute ssh --project "<project-name>" --zone "<zone-name>" "<instance-name>"```                    |
+| Download files     | ```gcloud compute copy-files example-instance:~/REMOTE-DIR ~/LOCAL-DIR --zone us-central1-a```                |
+| Upload files       | ```gcloud compute copy-files ~/LOCAL-FILE-1 example-instance:~/REMOTE-DIR --zone us-central1-a```             |
+
+### DISKS & VOLUMES
+| **Name**            | **Summary**                                                                  |
+|:-------------------:|:----------------------------------------------------------------------------:|
+| List all disks      | ```gcloud compute disks list```                                                    |
+| List all disk types | ```gcloud compute disk-types list```                                               |
+| List all snapshots  | ```gcloud compute snapshots list```                                                |
+| Create snapshot     | ```gcloud compute disks snapshot <diskname> --snapshotname <name1> --zone $zone``` |
+
+### NETWORK    
+| **Name**              | **Summary**                                                                       |
+|:---------------------:|:---------------------------------------------------------------------------------:|
+| List all networks     | ```gcloud compute networks list```                                                      |
+| Detail of one network | ```gcloud compute networks describe <network-name> --format json```                     |
+| Create network        | ```gcloud compute networks create <network-name>```                                     |
+| Create subnet         | ```gcloud compute networks subnets create subnet1 --network net1 --range 10.5.4.0/24``` |
+| Get a static ip       | ```gcloud compute addresses create --region us-west2-a vpn-1-static-ip```               |
+| List all ip addresses | ```gcloud compute addresses list```                                                     |
+| Describe ip address   | ```gcloud compute addresses describe <ip-name> --region us-central1```                  |
+| List all routes       | ```gcloud compute routes list```                                                        |
+
+### DNS
+| **Name**                          | **Summary**                                           |
+|:---------------------------------:|:-----------------------------------------------------:|
+| List of all record-sets in myzone | ```gcloud dns record-sets list --zone my_zone```            |
+| List first 10 DNS records         | ```gcloud dns record-sets list --zone my_zone --limit=10``` |
+    
+### FIREWALL
+| **Name**                   | **Summary**                                                                              |
+|:--------------------------:|:----------------------------------------------------------------------------------------:|
+| List all firewall rules    | ```gcloud compute firewall-rules list```                                                       |
+| List all forwarding rules  | ```gcloud compute forwarding-rules list```                                                     |
+| Describe one firewall rule | ```gcloud compute firewall-rules describe <rule-name>```                                       |
+| Create one firewall rule   | ```gcloud compute firewall-rules create my-rule --network default --allow tcp:9200 tcp:3306``` |
+| Update one firewall rule   | ```gcloud compute firewall-rules update default --network default --allow tcp:9200 tcp:9300``` |
+
+### IMAGES & CONTAINERS    
+| **Name**                    | **Summary**                                              |
+|:---------------------------:|:--------------------------------------------------------:|
+| List all images             | ```gcloud compute images list```                               |
+| List all container clusters | ```gcloud container clusters list```                           |
+| Set kubectl context         | ```gcloud container clusters get-credentials <cluster-name>``` |
+
+### RDS    
+| **Name**                    | **Summary**                                              |
+|:---------------------------:|:--------------------------------------------------------:|
+| List all sql instances      | ```gcloud sql instances list```                                |    
+    
+### SERVICES    
+| **Name**                           | **Summary**                            |
+|:----------------------------------:|:--------------------------------------:|
+| List my backend services           | ```gcloud compute backend-services list```   |
+| List all my health check endpoints | ```gcloud compute http-health-checks list``` |
+| List all URL maps                  | ```gcloud compute url-maps list```           |
+    
+    
+    
+    
+    
+    
+    
+    
