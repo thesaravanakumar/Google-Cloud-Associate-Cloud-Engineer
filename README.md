@@ -79,16 +79,11 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 <a name="Articles/Links"></a>
 ### **Articles/Links:**
 * [ ] [Associate Cloud Engineer Certification Exam Guide](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Exam%20Guide/Exam%20Guide%20(content).md)
-* [ ] [21 Google Cloud tools, each explained in under 2 minutes](https://cloud.google.com/blog/topics/inside-google-cloud/21-google-cloud-tools-each-explained-under-2-minutes)
 * [ ] [Introducing a Google Cloud architecture diagramming tool](https://cloud.google.com/blog/topics/developers-practitioners/introducing-google-cloud-architecture-diagramming-tool)
 * [ ] [Google Cloud Developer Cheat Sheet](https://googlecloudcheatsheet.withgoogle.com/)
-* [ ] [GCP SKETCH NOTES](https://thecloudgirl.dev/sketchnote.html)
+* [ ] [Basic gcloud commands](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/gcloud-commands.md)                   
+* [ ] [21 Google Cloud tools, each explained in under 2 minutes](https://cloud.google.com/blog/topics/inside-google-cloud/21-google-cloud-tools-each-explained-under-2-minutes)
 * [ ] [Sketch Notes Github Link](https://github.com/priyankavergadia/GCPSketchnote)
-* [ ] [gcp gcloud cheat sheet · GitHub](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
-* [ ] [GCP command-line cheat sheet](https://itnext.io/gcp-command-line-cheatsheet-5e4434ca2c84#d8b9)
-* [ ] [GCP Cheatsheet](https://cheatsheet.dennyzhang.com/cheatsheet-gcp-a4)
-* [ ] [Associate Cloud Engineer - Study Notes - 2018](https://docs.google.com/document/d/1u6pXBiGMYj7ZLBN21x6jap11rG6gWk7n210hNnUzrkI/edit#heading=h.kdrg27iwji0o)
-* [ ] [Associate Cloud Engineer - Study Notes | Google Cloud Associate Exam](https://www.cloudadvocate.net/p/associate-cloud-engineer-study-notes.html)
 * [ ] [Associate Cloud Engineer Sample Questions](https://docs.google.com/forms/d/e/1FAIpQLSfexWKtXT2OSFJ-obA4iT3GmzgiOCGvjrT9OfxilWC1yPtmfQ/viewform)
 
 <a name="Sharepoints"></a>
@@ -100,6 +95,7 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 * [ ] [Interconnecting Networks](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/4-Interconnecting%20Networks.pdf)
 * [ ] [Storage and Database Services](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/5-Storage%20and%20Database%20Services.pdf)
 * [ ] [GCP Zero to Hero](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/GCP%20Zero%20to%20Hero.pdf)
+* [ ] [Workbooks](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/tree/main/Workbook)
 
 <a name="Book"></a>
 ### **Book:**
