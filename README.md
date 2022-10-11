@@ -78,7 +78,7 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 
 <a name="Articles/Links"></a>
 ### **Articles/Links:**
-* [x] [Associate Cloud Engineer Certification Exam Guide](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Exam%20Guide/Exam%20Guide%20(content).md)
+* [x] [Associate Cloud Engineer Certification Exam Guide](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Exam%20Guide/Exam%20Guide%20(Links).md)
 * [x] [Introducing a Google Cloud architecture diagramming tool](https://cloud.google.com/blog/topics/developers-practitioners/introducing-google-cloud-architecture-diagramming-tool)
 * [x] [Google Cloud Developer Cheat Sheet](https://googlecloudcheatsheet.withgoogle.com/)
 * [x] [Basic gcloud commands](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/gcloud-commands.md)                   
