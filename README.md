@@ -78,13 +78,13 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 
 <a name="Articles/Links"></a>
 ### **Articles/Links:**
-* [ ] [Associate Cloud Engineer Certification Exam Guide](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Exam%20Guide/Exam%20Guide%20(content).md)
-* [ ] [Introducing a Google Cloud architecture diagramming tool](https://cloud.google.com/blog/topics/developers-practitioners/introducing-google-cloud-architecture-diagramming-tool)
-* [ ] [Google Cloud Developer Cheat Sheet](https://googlecloudcheatsheet.withgoogle.com/)
-* [ ] [Basic gcloud commands](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/gcloud-commands.md)                   
-* [ ] [21 Google Cloud tools, each explained in under 2 minutes](https://cloud.google.com/blog/topics/inside-google-cloud/21-google-cloud-tools-each-explained-under-2-minutes)
-* [ ] [Sketch Notes Github Link](https://github.com/priyankavergadia/GCPSketchnote)
-* [ ] [Associate Cloud Engineer Sample Questions](https://docs.google.com/forms/d/e/1FAIpQLSfexWKtXT2OSFJ-obA4iT3GmzgiOCGvjrT9OfxilWC1yPtmfQ/viewform)
+* [x] [Associate Cloud Engineer Certification Exam Guide](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Exam%20Guide/Exam%20Guide%20(content).md)
+* [x] [Introducing a Google Cloud architecture diagramming tool](https://cloud.google.com/blog/topics/developers-practitioners/introducing-google-cloud-architecture-diagramming-tool)
+* [x] [Google Cloud Developer Cheat Sheet](https://googlecloudcheatsheet.withgoogle.com/)
+* [x] [Basic gcloud commands](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/gcloud-commands.md)                   
+* [x] [21 Google Cloud tools, each explained in under 2 minutes](https://cloud.google.com/blog/topics/inside-google-cloud/21-google-cloud-tools-each-explained-under-2-minutes)
+* [x] [Sketch Notes Github Link](https://github.com/priyankavergadia/GCPSketchnote)
+* [x] [Associate Cloud Engineer Sample Questions](https://docs.google.com/forms/d/e/1FAIpQLSfexWKtXT2OSFJ-obA4iT3GmzgiOCGvjrT9OfxilWC1yPtmfQ/viewform)
 
 <a name="Sharepoints"></a>
 ### **Sharepoints:**
