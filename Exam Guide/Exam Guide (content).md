@@ -228,7 +228,7 @@
 
     e. Managing service account impersonation
 
-    e. Creating and managing short-lived service account credentials
+    f. Creating and managing short-lived service account credentials
 
 5.3 Viewing audit logs
 
