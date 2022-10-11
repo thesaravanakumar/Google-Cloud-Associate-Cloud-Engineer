@@ -169,6 +169,8 @@ gcloud container images describe gcr.io/myproject/myimage:tag
 | List projects     | ```gcloud config list```, ```gcloud config list project``` |
 | Show project info | ```gcloud compute project-info describe```           |
 | Switch project    | ```gcloud config set project <project-id>```         |
+| List service available | ```gcloud services list --available```       |
+| Enable services | ```gcloud services enable container.googleapis.com``` |
     
 ### GKE    
 | **Name**                                | **Summary**                                              |
@@ -185,6 +187,7 @@ gcloud container images describe gcr.io/myproject/myimage:tag
 |:---------------------------------------:|:---------------------------------------------------------------:|
 | Authenticate client                     | ```gcloud auth activate-service-account --key-file <key-file>```      |
 | Display a list of credentialed accounts | ```gcloud auth list```                                                |
+| To authenticate with a user identity.   | ```gcloud auth login```                                                |
 | Set the active account                  | ```gcloud config set account <ACCOUNT>```                             |
 | Auth to GCP Container Registry          | ```gcloud auth configure-docker```                                    |
 | Print token for active account          | ```gcloud auth print-access-token```, ```gcloud auth print-refresh-token``` |
@@ -229,6 +232,8 @@ gcloud container images describe gcr.io/myproject/myimage:tag
 | List all ip addresses | ```gcloud compute addresses list```                                                     |
 | Describe ip address   | ```gcloud compute addresses describe <ip-name> --region us-central1```                  |
 | List all routes       | ```gcloud compute routes list```                                                        |
+| Generate ssh config   | ```gcloud compute config-ssh```                                                         |
+| Windows RDP reset windows password| ```gcloud compute reset-windows-password instance --user=jdoe```            |
 
 ### DNS
 | **Name**                          | **Summary**                                           |
@@ -264,10 +269,144 @@ gcloud container images describe gcr.io/myproject/myimage:tag
 | List all my health check endpoints | ```gcloud compute http-health-checks list``` |
 | List all URL maps                  | ```gcloud compute url-maps list```           |
     
+We can impersonate service account from a user or another service account, a short-lived token is used instead of service account key.
+```
+# serviceAccount:ansible  impersonate as a svc account terraform@${PROJECT_ID}.iam.gserviceaccount.com
+# ${SA_PROJECT_ID} is the global project storing all the service accounts
+TF_SA_EMAIL=terraform@${SA_PROJECT_ID}.iam.gserviceaccount.com
+ANSIBLE_SA_EMAIL="ansible@${SA_PROJECT_ID}.iam.gserviceaccount.com"
+gcloud iam service-accounts add-iam-policy-binding ${TF_SA_EMAIL} \
+    --project ${SA_PROJECT_ID} \
+    --member "serviceAccount:$ANSIBLE_SA_EMAIL" \
+    --role roles/iam.serviceAccountTokenCreator
+# create a gcp project $A_PROJECT_ID under $A_FOLDER_ID
+gcloud projects --impersonate-service-account=$TF_SA_EMAIL create $A_PROJECT_ID --name=$A_PROJECT_NAME --folder=$A_FOLDER_ID
+```
+```
+# user:pythonrocks@gmail.com impersonate as a svc account terraform@${PROJECT_ID}.iam.gserviceaccount.com
+TF_SA_EMAIL=terraform@your-service-account-project.iam.gserviceaccount.com
+gcloud iam service-accounts add-iam-policy-binding  $TF_SA_EMAIL --member=user:pythonrocks@gmail.com \
+--role roles/iam.serviceAccountTokenCreator
+
+gcloud container clusters list --impersonate-service-account=terraform@${PROJECT_ID}.iam.gserviceaccount.com    
+```    
+
+### Cloud Build
+```
+# user defined
+gcloud builds submit --config=cloudbuild.yaml --substitutions=_BRANCH_NAME=foo,_BUILD_NUMBER=1 .
+
+# override built in TAG_NAME
+gcloud builds submit --config=cloudbuild.yaml --substitutions=TAG_NAME=v1.0.1
+
+# cloud build with artifact registry
+export GCP_REGION="us-east1"
+export TEST_IMAGE="us-docker.pkg.dev/google-samples/containers/gke/hello-app:1.0"
+export IMAGE_NAME="hello-app"
+export REPO_NAME=team1
+export TAG_NAME="tag1"
+docker pull $TEST_IMAGE
+docker tag $TEST_IMAGE \
+    ${GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${IMAGE_NAME}:${TAG_NAME}
+docker push ${GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${IMAGE_NAME}:${TAG_NAME}
+# build / push image to artifact registry (using local Dockerfile)
+gcloud builds submit --tag ${GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${IMAGE_NAME}:${TAG}
+```    
     
-    
-    
-    
-    
-    
-    
+### Private Service Access
+Useful for services like Cloud SQL and Redis, peering between a custom VPC to a managed VPC by google.
+```
+gcloud services vpc-peerings list --network=my-vpc
+```
+
+### Shared vpc
+```
+# Enable shared-vpc in '${NETWORK_PROJECT_ID}'
+gcloud services enable --project ${NETWORK_PROJECT_ID} compute.googleapis.com
+gcloud compute shared-vpc enable ${NETWORK_PROJECT_ID}
+
+# Associate a service project with '${NETWORK_PROJECT_ID}'
+gcloud services enable --project ${PLATFORM_PROJECT_ID} compute.googleapis.com
+gcloud compute firewall-rules delete --project ${PLATFORM_PROJECT_ID} --quiet default-allow-icmp default-allow-internal default-allow-rdp default-allow-ssh
+gcloud compute networks delete --project ${PLATFORM_PROJECT_ID} --quiet default
+gcloud compute shared-vpc associated-projects add ${PLATFORM_PROJECT_ID} --host-project ${NETWORK_PROJECT_ID}
+
+## Disassociate a service project from host project.
+gcloud compute shared-vpc associated-projects remove ${PLATFORM_PROJECT_ID} --host-project ${NETWORK_PROJECT_ID}
+```
+
+### Interconnect
+```
+# list Google Compute Engine interconnect locations
+gcloud compute interconnects locations list    
+```    
+
+### Cloud Run
+```
+# deploy a service on Cloud Run in us-central1 and allow unauthenticated user
+gcloud run deploy --image gcr.io/${PROJECT-ID}/helloworld --platform managed --region us-central1 --allow-unauthenticated
+
+# list services
+gcloud run services list
+# get endpoint url for a service
+gcloud run services describe <service_name> --format="get(status.url)"
+
+export SA_NAME="cloud-scheduler-runner"
+export SA_EMAIL="${SA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com"
+
+# create service account
+gcloud iam service-accounts create $SA_NAME \
+    --display-name "${SA_NAME}"
+
+# add sa binding to cloud run app
+gcloud run services add-iam-policy-binding $APP_DIR \
+    --platform managed \
+    --region $GCP_REGION \
+    --member=serviceAccount:$SA_EMAIL \
+    --role=roles/run.invoker
+# fetch the service URL
+export APP="helloworld"
+export SVC_URL=$(gcloud run services describe $APP --platform managed --region $GCP_REGION --format="value(status.url)")
+
+# create the job to hit URL every 1 minute
+gcloud scheduler jobs create http test-job --schedule "*/1 * * * *" \
+    --http-method=GET \
+    --uri=$SVC_URL \
+    --oidc-service-account-email=$SA_EMAIL \
+    --oidc-token-audience=$SVC_URL
+
+export GCP_REGION="us-east1" 
+export SERVICE_NAME="hello-service"
+# deploy app to Cloud Run
+gcloud run deploy $SERVICE_NAME \
+    --platform managed \
+    --region $GCP_REGION \
+    --allow-unauthenticated \
+    --image ${GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${IMAGE_NAME}:${TAG_NAME}
+
+# confirm service is running
+gcloud run services list \
+    --platform managed \
+    --region $GCP_REGION
+# test URL
+export SVC_URL=$(gcloud run services describe $SERVICE_NAME --platform managed --region $GCP_REGION --format="value(status.url)")
+
+curl -X GET $SVC_URL
+# Hello, world!
+# Version: 1.0.0
+# Hostname: localhost
+```
+
+### Artifact registry
+```
+export REPO_NAME=team1
+export GCP_REGION="us-east1" 
+
+gcloud artifacts repositories create $REPO_NAME \
+    --repository-format=docker \
+    --location=$GCP_REGION \
+    --description="Docker repository"
+
+# Configure auth
+gcloud auth configure-docker ${GCP_REGION}-docker.pkg.dev
+```
