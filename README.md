@@ -33,7 +33,7 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 |Mode			| 	Remote or Exam center|
 |Prerequisites		| 	None|
 |Experience		| 	6+ months recommended|
-|Renewal		|	2 years|
+|Renewal		|	[3 years from OCT 2022](https://www.googlecloudcommunity.com/gc/Cloud-Certified-Group/Good-news-for-Associate-Cloud-Engineer-certification-holders/m-p/471693)|
 |Register		|	[Link](https://www.webassessor.com/googlecloud/) for Exam registration|
 
 </div>
