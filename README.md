@@ -61,16 +61,16 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
                   
 <a name="CloudSkillBoost"></a>
 ### **Cloud Skill Boost:**
-* [ ] [Cloud Engineer Learning Path](https://www.cloudskillsboost.google/paths/11)
-  * [ ] [Create and Manage Cloud Resources](https://www.cloudskillsboost.google/quests/120)
-  * [ ] [Perform Foundational Infrastructure Tasks in Google Cloud](https://www.cloudskillsboost.google/quests/118)
-  * [ ] [Set Up and Configure a Cloud Environment in Google Cloud](https://www.cloudskillsboost.google/quests/119)
-  * [ ] [Automating Infrastructure on Google Cloud with Terraform](https://www.cloudskillsboost.google/quests/159)
-  * [ ] [Logging, Monitoring and Observability in Google Cloud](https://www.cloudskillsboost.google/course_templates/99)
-  * [ ] [Deploy and Manage Cloud Environments with Google Cloud](https://www.cloudskillsboost.google/quests/121)
-* [ ] [Build and Secure Networks in Google Cloud](https://www.cloudskillsboost.google/quests/128)
-* [ ] [Deploy to Kubernetes in Google Cloud](https://www.cloudskillsboost.google/quests/116)
-* [ ] [Getting Started with Terraform for Google Cloud](https://www.cloudskillsboost.google/course_templates/443)
+* [x] [Cloud Engineer Learning Path](https://www.cloudskillsboost.google/paths/11)
+  * [x] [Create and Manage Cloud Resources](https://www.cloudskillsboost.google/quests/120)
+  * [x] [Perform Foundational Infrastructure Tasks in Google Cloud](https://www.cloudskillsboost.google/quests/118)
+  * [x] [Set Up and Configure a Cloud Environment in Google Cloud](https://www.cloudskillsboost.google/quests/119)
+  * [x] [Automating Infrastructure on Google Cloud with Terraform](https://www.cloudskillsboost.google/quests/159)
+  * [x] [Logging, Monitoring and Observability in Google Cloud](https://www.cloudskillsboost.google/course_templates/99)
+  * [x] [Deploy and Manage Cloud Environments with Google Cloud](https://www.cloudskillsboost.google/quests/121)
+* [x] [Build and Secure Networks in Google Cloud](https://www.cloudskillsboost.google/quests/128)
+* [x] [Deploy to Kubernetes in Google Cloud](https://www.cloudskillsboost.google/quests/116)
+* [x] [Getting Started with Terraform for Google Cloud](https://www.cloudskillsboost.google/course_templates/443)
                          
 <a name="Youtube"></a>
 ### **Youtube:**
