@@ -201,19 +201,15 @@ Centralized Network monitoring and visibility
 
 <img width="1281" alt="Screenshot 2022-10-25 at 11 57 23 PM" src="https://user-images.githubusercontent.com/59575502/197852679-f38a0062-148f-4bf3-983b-f9faaeabd35d.png">
 
+![image](https://user-images.githubusercontent.com/59575502/197853941-f1fd6cee-b56e-445d-b674-b2cadfcb4497.png)
 
+### Cloud Trace Tracks Application Latency
+- Track request latencies as they propagate
+- Detailed, near real-time performance insights.
+- In-depth reports
+- Support for several mainstream languages
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Cloud Profiler
+- Continuous profiling of production systems 
+- Statistical, low-overhead memory and CPU profiler 
+- Contextualized to your code
