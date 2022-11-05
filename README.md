@@ -74,7 +74,7 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
                          
 <a name="Youtube"></a>
 ### **Youtube:**
-* [ ] This is my [Youtube](https://www.youtube.com/playlist?list=PLzG1TFYtKG9cRgMw_88Nuy28c7Pe1JOH6) playlist contains a lot of gcp videos.                 
+* [x] This is my [Youtube](https://www.youtube.com/playlist?list=PLzG1TFYtKG9cRgMw_88Nuy28c7Pe1JOH6) playlist contains a lot of gcp videos.                 
 
 <a name="Articles/Links"></a>
 ### **Articles/Links:**
