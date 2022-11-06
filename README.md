@@ -89,13 +89,13 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 <a name="Sharepoints"></a>
 ### **Sharepoints:**
 * [x] [Welcome](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/0-Welcome.pdf)
-* [ ] [VPC Networking Fundamentals](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/1-VPC%20Networking%20Fundamentals.pdf)
-* [ ] [Virtual Networks](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/2-Virtual%20Networks.pdf)
-* [ ] [Sharing Networks across Projects](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/3-Sharing%20Networks%20across%20Projects.pdf)
-* [ ] [Interconnecting Networks](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/4-Interconnecting%20Networks.pdf)
-* [ ] [Storage and Database Services](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/5-Storage%20and%20Database%20Services.pdf)
-* [ ] [GCP Zero to Hero](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/GCP%20Zero%20to%20Hero.pdf)
-* [ ] [Workbooks](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/tree/main/Workbook)
+* [x] [VPC Networking Fundamentals](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/1-VPC%20Networking%20Fundamentals.pdf)
+* [x] [Virtual Networks](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/2-Virtual%20Networks.pdf)
+* [x] [Sharing Networks across Projects](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/3-Sharing%20Networks%20across%20Projects.pdf)
+* [x] [Interconnecting Networks](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/4-Interconnecting%20Networks.pdf)
+* [x] [Storage and Database Services](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/5-Storage%20and%20Database%20Services.pdf)
+* [x] [GCP Zero to Hero](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/blob/main/Sharepoints/GCP%20Zero%20to%20Hero.pdf)
+* [x] [Workbooks](https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/tree/main/Workbook)
 
 <a name="Book"></a>
 ### **Book:**
