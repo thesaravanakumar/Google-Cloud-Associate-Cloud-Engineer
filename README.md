@@ -99,7 +99,7 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 
 <a name="Book"></a>
 ### **Book:**
-* [ ] [Official Google Cloud Certified Associate Cloud Engineer Study Guide](https://www.amazon.in/Official-Google-Certified-Associate-Engineer/dp/1119564417) **- Book by Dan Sullivan**
+* [x] [Official Google Cloud Certified Associate Cloud Engineer Study Guide](https://www.amazon.in/Official-Google-Certified-Associate-Engineer/dp/1119564417) **- Book by Dan Sullivan**
 
 <div align="center">
 <a href="https://cloud.google.com/training/cloud-infrastructure/#cloud-engineer-learning-path">
