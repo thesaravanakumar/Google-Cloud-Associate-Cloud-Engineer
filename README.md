@@ -1,5 +1,11 @@
 # ASSOCIATE CLOUD ENGINEER
 
+<div align="right">
+<a href="https://github.com/thesaravanakumar/Google-Cloud-Associate-Cloud-Engineer/pulls">
+  <img align="center"  src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"/>
+</a>
+</div>
+
 <div align="center">
 <a href="https://cloud.google.com/certification/cloud-engineer">
   <img src="https://user-images.githubusercontent.com/59575502/188862824-ad02f701-d305-4011-a2a3-9f6163535371.png" height="250px" width="350px align="center">
