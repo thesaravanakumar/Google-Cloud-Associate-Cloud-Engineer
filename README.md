@@ -16,7 +16,7 @@
 <p align="center">
 Associate Cloud Engineers deploy applications, monitor operations, and manage enterprise solutions. They use Google Cloud Console and the command-line interface to perform common platform-based tasks to maintain one or more deployed solutions that leverage Google-managed or self-managed services on Google Cloud.
 <br />  
-My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4c93948c-6436-4c1a-84fa-1bf0792bef82.gif">Certification</a> | <a href = "https://www.cloudskillsboost.google/public_profiles/096e04ea-cbfa-4dc2-8da6-ac9b2ded8ee2">cloudskillboost</a> profile
+My ACE <a href = "https://www.credential.net/41bc5a7f-4c35-4f98-8b60-c5ae4156edbd">Certification</a> | <a href = "https://www.cloudskillsboost.google/public_profiles/096e04ea-cbfa-4dc2-8da6-ac9b2ded8ee2">cloudskillboost</a> profile
 </p>
 
 **The Associate Cloud Engineer exam assesses your ability to:**
@@ -29,18 +29,9 @@ My ACE <a href = "https://user-images.githubusercontent.com/59575502/188865241-4
 
 <div align="center">
 
-**ABOUT THIS CERTIFICATION EXAM**
-
-| Level | Challenge |
-| :---: | :---: |
-|Length|			2 hours|
-|Registration fee     	|	$88.50 ≈ ₹7000|
-|Exam Format		| 	Multiple choice and multiple select|
-|Mode			| 	Remote or Exam center|
-|Prerequisites		| 	None|
-|Experience		| 	6+ months recommended|
-|Renewal		|	[3 years from OCT 2022](https://www.googlecloudcommunity.com/gc/Cloud-Certified-Group/Good-news-for-Associate-Cloud-Engineer-certification-holders/m-p/471693)|
-|Register		|	[Link](https://www.webassessor.com/googlecloud/) for Exam registration|
+| **ABOUT THIS CERTIFICATION EXAM** | **CERTIFICATION** |
+|:----:|:----:|
+|   <table> <tr> <td>Level</td> <td>Challenge</td> </tr> <tr><td>Length</td> <td>2 hours</td> </tr> <tr> <td>Registration fee</td> <td>$88.50 ≈ ₹7000</td> </tr> <tr> <td>Exam Format</td> <td>Multiple choice and multiple select</td> </tr> <tr> <td>Mode</td> <td>Remote or Exam center</td> </tr> <tr> <td>Prerequisites</td> <td>None</td> </tr> <tr> <td>Experience</td> <td>6+ months recommended</td> </tr> <tr> <td>Renewal</td> <td>[3 years from OCT 2022](https://www.googlecloudcommunity.com/gc/Cloud-Certified-Group/Good-news-for-Associate-Cloud-Engineer-certification-holders/m-p/471693)</td> </tr> <tr> <td>Register</td> <td>[Link](https://www.webassessor.com/googlecloud/) for Exam registration</td> </tr> </table>   |   <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/65397360"  align="center">   |
 
 </div>
 
